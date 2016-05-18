@@ -1,13 +1,24 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+
 
 public class Main{
+	
+	ArrayList<String> numbers = new ArrayList<>(Arrays.asList(""));
 
+	
 	public static void main(String[] args) {
-		Person male1 = new Person("Bob", "Tree", 43, 160, true);
-		Person male2 = new Person("Blob", "Shrub", 43, 160, true);
-		Person male3 = new Person("Boop", "Leaf", 43, 160, true);
-		Person male4 = new Person("Boot", "Sprout", 43, 160, true);
+		
+		
 		Profile.createUser();
 	}
+	
 	
 	//testing
 
