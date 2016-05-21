@@ -1,54 +1,76 @@
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
-import java.util.Scanner;
+import java.util.ArrayList;
+public class Person {
 
-public class Profile{
+	private String firstName;
+	private String lastName;
+	private int age;
+	private boolean male;
+	private int height;
+	BufferedImage image;
+	private ArrayList<String> favoriteThings = new ArrayList<String>();
 	
-	static Scanner input = new Scanner(System.in);
-	ProfileWindow pw;
-	
-	public static void createUser(){
-		
-		Person male1 = new Person("Bob", "Tree", 43, 160, true);
-		Person male2 = new Person("Blob", "Shrub", 43, 160, true);
-		
-		Person male3 = new Person("Boop", "Leaf", 43, 160, true);
-		Person male4 = new Person("Boot", "Sprout", 43, 160, true);
-		
-		Person user = new Person("","", 0, 0, true);
-		System.out.println("Enter First Name");
-		String fName = input.next();
-		user.setFirstName(fName);
-		System.out.println("Enter Last Name");
-		String lName = input.next();
-		user.setLastName(lName);
-		System.out.println("Enter Age");
-		int age = input.nextInt();
-		user.setAge(age);
-		System.out.println("Enter Gender");
-		String gender = input.next();
-		if(!gender.equals("male")){
-			user.setGender(false);
-		}
-		
-		
-		
-		
-		ProfileWindow pw = new ProfileWindow(user);
-		pw.addPerson(male1);
-		pw.addPerson(male2);
-		pw.addPerson(male3);
-		pw.addPerson(male4);
-		
-		
-		pw.setVisible(true);
-		
+	public Person(String firstName,String lastName, int age,int height, boolean male){
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.male = male;
+		this.height = height;
+		image = new BufferedImage(100, 200, BufferedImage.TYPE_INT_ARGB);
+		favoriteThings = new ArrayList<String>();
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 	
-	public void keyPressed(KeyEvent e) {
-	    if (e.getKeyCode() == KeyEvent.VK_RIGHT ) {
-	  
-	    }
+	public int getHeight(){
+		return height;
 	}
+	
+	public void setHeight(int height){
+		this.height = height;
+	}
+
+	public boolean isMale(){
+		return male;
+	}
+	public void setGender(boolean male){
+		this.male = male;
+	}
+
+	public Image getImage() {
+		//don't change the following line
+		Graphics2D g2 = (Graphics2D)image.getGraphics();
+		g2.setColor(Color.BLACK);
+		g2.drawString(firstName,0,20);
+		g2.drawString(lastName,0,40);
 		
+		return image;
 	}
+	
+}
