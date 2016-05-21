@@ -9,6 +9,13 @@ import java.util.List;
 //hi
 
 public class Main{
+	public static boolean[] userAnswers = new boolean[5];
+	public static boolean[] male1 = {false, false, true, false, true};
+	public static boolean[] male2 = {true, true, false, true, false};
+	public static boolean[] male3 = {false, true, false, true, false};
+	public static boolean[] male4 = {false, true, true, true, true};
+	
+	
 	
 	ArrayList<String> numbers = new ArrayList<>(Arrays.asList(""));
 

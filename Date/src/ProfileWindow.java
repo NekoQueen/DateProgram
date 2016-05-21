@@ -8,14 +8,14 @@ import javax.swing.JFrame;
 
 public class ProfileWindow extends JFrame implements MouseListener{
 	
-	ArrayList<Person> persons;
+	public static ArrayList<Person> persons;
 	String s;
 	
 	public ProfileWindow(Person person){
 		this.persons = new ArrayList<Person>();
 		s="";
 		persons.add(person);
-		setSize(800,500);
+		setSize(1800,1200);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocation(200,200);
 		addMouseListener(this);
@@ -33,7 +33,7 @@ public class ProfileWindow extends JFrame implements MouseListener{
 		int y= 50;
 		for(int i = 0; i < persons.size(); i++){
 			g.drawImage(persons.get(i).getImage(), 50,y, null);
-			y+=90;
+			y+=75;
 		}
 	}
 

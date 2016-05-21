@@ -10,10 +10,15 @@ public class Profile{
 	public static void createUser(){
 		
 		Person male1 = new Person("Bob", "Tree", 43, 160, true);
-		Person male2 = new Person("Blob", "Shrub", 43, 160, true);
+		Person male2 = new Person("Blob", "Shrub", 19, 160, true);		
+		Person male3 = new Person("Boop", "Leaf", 27, 160, true);
+		Person male4 = new Person("Boot", "Sprout", 39, 160, true);
 		
-		Person male3 = new Person("Boop", "Leaf", 43, 160, true);
-		Person male4 = new Person("Boot", "Sprout", 43, 160, true);
+		Person female1 = new Person("A", "D", 34, 152, false);
+		Person female2 = new Person("B", "C", 25, 145, false);		
+		Person female3 = new Person("C", "B", 27, 157, false);
+		Person female4 = new Person("D", "A", 36, 153, false);
+		
 		
 		Person user = new Person("","", 0, 0, true);
 		System.out.println("Enter First Name");
@@ -39,7 +44,10 @@ public class Profile{
 		pw.addPerson(male2);
 		pw.addPerson(male3);
 		pw.addPerson(male4);
-		
+		pw.addPerson(female1);
+		pw.addPerson(female2);
+		pw.addPerson(female3);
+		pw.addPerson(female4);
 		
 		pw.setVisible(true);
 		
