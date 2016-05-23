@@ -36,7 +36,7 @@ public class Profile{
 			user.setGender(false);
 		}
 		
-		
+		UserQuestions.userAnswer();
 		
 		
 		ProfileWindow pw = new ProfileWindow(user);

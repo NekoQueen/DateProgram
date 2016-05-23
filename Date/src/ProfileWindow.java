@@ -1,5 +1,7 @@
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -15,9 +17,13 @@ public class ProfileWindow extends JFrame implements MouseListener{
 		this.persons = new ArrayList<Person>();
 		s="";
 		persons.add(person);
-		setSize(1800,1200);
+//		setSize(1800,1200);
+		setExtendedState(JFrame.MAXIMIZED_BOTH); 
+		setVisible(true);
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLocation(200,200);
+//		setLocation(200,200);
 		addMouseListener(this);
 	}
 	
