@@ -11,10 +11,11 @@ public class Person {
 	private int age;
 	private boolean male;
 	private int height;
+	private double matchPercent;
 	BufferedImage image;
 	private ArrayList<String> favoriteThings = new ArrayList<String>();
 	
-	public Person(String firstName,String lastName, int age,int height, boolean male){
+	public Person(String firstName,String lastName, int age,int height, boolean male, double matchPercent){
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -61,6 +62,13 @@ public class Person {
 	}
 	public void setGender(boolean male){
 		this.male = male;
+	}
+	
+	public double getMatchPercent(){
+		return matchPercent = matchPercent;
+	}
+	public void setMatchPercent(double matchPercent){
+		this.matchPercent = matchPercent;
 	}
 
 	public Image getImage() {

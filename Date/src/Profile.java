@@ -9,18 +9,18 @@ public class Profile{
 	
 	public static void createUser(){
 		
-		Person male1 = new Person("Bob", "Tree", 43, 160, true);
-		Person male2 = new Person("Blob", "Shrub", 19, 160, true);		
-		Person male3 = new Person("Boop", "Leaf", 27, 160, true);
-		Person male4 = new Person("Boot", "Sprout", 39, 160, true);
+		Person male1 = new Person("Bob", "Tree", 43, 160, true, 0);
+		Person male2 = new Person("Blob", "Shrub", 19, 160, true, 0);		
+		Person male3 = new Person("Boop", "Leaf", 27, 160, true, 0);
+		Person male4 = new Person("Boot", "Sprout", 39, 160, true, 0);
 		
-		Person female1 = new Person("A", "D", 34, 152, false);
-		Person female2 = new Person("B", "C", 25, 145, false);		
-		Person female3 = new Person("C", "B", 27, 157, false);
-		Person female4 = new Person("D", "A", 36, 153, false);
+		Person female1 = new Person("A", "D", 34, 152, false,0);
+		Person female2 = new Person("B", "C", 25, 145, false,0);		
+		Person female3 = new Person("C", "B", 27, 157, false,0);
+		Person female4 = new Person("D", "A", 36, 153, false,0);
 		
 		
-		Person user = new Person("","", 0, 0, true);
+		Person user = new Person("","", 0, 0, true, 0);
 		System.out.println("Enter First Name");
 		String fName = input.next();
 		user.setFirstName(fName);

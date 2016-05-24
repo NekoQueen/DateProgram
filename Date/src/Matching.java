@@ -1,9 +1,20 @@
 
 public class Matching {
-	public int matchMaking(){
+	public static double matchMaking(boolean[] array){
+		double yes = 0;
+		double no = 0;
 		
+		for(int i = 0; i < array.length; i++){
+			if(array[i] == Main.userAnswers[i]){
+				if(array[i] == false){
+					no++;
+				}else{
+					yes++;
+				}
+			}
+		}
 		
-		
-		return 0;
+		System.out.println((yes+no)/5);
+		return (yes+no)/5;
 	}
 }
