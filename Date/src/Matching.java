@@ -16,5 +16,7 @@ public class Matching {
 		
 		System.out.println((yes+no)/5);
 		return (yes+no)/5;
+		
+		//use new classes to set percentage later
 	}
 }
