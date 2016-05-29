@@ -15,6 +15,10 @@ public class User {
 		this.city = city;
 	}
 
+	public double getMatchPercentage() {
+		return matchPercentage;
+	}
+
 	public User() {
 		// TODO Auto-generated constructor stub
 	}

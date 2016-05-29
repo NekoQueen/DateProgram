@@ -1,5 +1,7 @@
 import java.awt.Graphics;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import javax.swing.JFrame;
@@ -8,6 +10,7 @@ public class Screen extends JFrame{
 	
 	static Scanner input = new Scanner(System.in);
 	static User user = new User();
+	static ArrayList<User> highUsers = new ArrayList<>();
 	
 	public static void main(String[] args){
 		
@@ -21,6 +24,14 @@ public class Screen extends JFrame{
 		user.setGender(input.nextBoolean());
 		System.out.println("city");
 		user.setCity(input.next());
+		
+		UserQuestions.userAnswer();
+		
+		PresetUserAnswers.setAnswers();
+		
+		PresetUsers.generatePercentage();
+		
+//		getHighPercentagePeople();
 		
 		new Screen();
 	}
@@ -45,10 +56,23 @@ public class Screen extends JFrame{
 		g.drawString(user.getCity(), 100, 500);
 		
 		for(int i = 0; i < PresetUsers.UsersList.size(); i++){
-			g.drawString(PresetUsers.UsersList.get(i).getFirstName(), 200, y);
+			g.drawString(PresetUsers.UsersList.get(i).getFirstName(), 600, y);
+			g.drawString(String.valueOf(PresetUsers.UsersList.get(i).getMatchPercentage()), 650, y);
 			y+=100;
 		}
 	}
+
+
+//	public static ArrayList<User> getHighPercentagePeople() {
+//		
+//		for(int i = 0; i < 2; i++){
+//			if(PresetUsers.UsersList.get(i).getMatchPercentage() >= .6){
+//				highUsers.add(PresetUsers.UsersList.get(i));
+//			}
+//		}
+//		return highUsers;
+//		
+//	}
 	  
 	 
 }

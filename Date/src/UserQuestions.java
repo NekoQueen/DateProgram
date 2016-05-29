@@ -1,7 +1,8 @@
-import java.util.Arrays;
+import java.util.Scanner;
 
 
 public class UserQuestions {
+	static Scanner sc = new Scanner(System.in);
 	public static void userAnswer(){
 		System.out.println("Enter Yes or No");
 				
@@ -13,11 +14,11 @@ public class UserQuestions {
 		
 		for(int i = 0; i < questions.length; i++){
 			System.out.println(questions[i]);
-			String answer = Profile.input.next();
+			String answer = sc.next();
 			if(answer.equals("Yes")){
-				Main.userAnswers[i] = true;
+				PresetUserAnswers.userAnswers[i] = true;
 			}else{
-				Main.userAnswers[i] = false;
+				PresetUserAnswers.userAnswers[i] = false;
 			}
 		}
 	}
