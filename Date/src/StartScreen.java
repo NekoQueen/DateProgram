@@ -33,9 +33,9 @@ public class StartScreen extends Screen implements KeyListener{
 	}
 
 	public void keyPressed(KeyEvent k) {
-		if(k.getKeyCode() == KeyEvent.VK_SPACE){
-			Screen mainMenu = new MainMenu(game);
-			game.setScreen(mainMenu);
+		if(k.getKeyCode() == KeyEvent.VK_1){
+			Screen sort1 = new Sort1(game);
+			game.setScreen(sort1);
 		}
 	}
 
