@@ -1,5 +1,6 @@
 
 public class Matching {
+	
 	static double[] percentList = new double[PresetUsers.UsersList.size()];
 	public static double matchMaking(boolean[] array){
 		double yes = 0;
