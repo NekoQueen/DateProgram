@@ -26,6 +26,8 @@ public class DateDemo extends Game{
 		PresetUserAnswers.setAnswers();
 
 		PresetUsers.generatePercentage();
+		
+		
 
 		new DateDemo();
 

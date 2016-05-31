@@ -20,8 +20,10 @@ public class Sort1 extends Screen implements KeyListener{
 		g2.fillRect(0,0,width,height);
 		g2.setColor(Color.white);
 		ArrayList<User> people = Sort.selectAge();
+		UtilityMethods.centerTextAtY(g2, "Sort by Age", 600, 50);
 		for(int i = 0; i < people.size(); i++){
-			UtilityMethods.centerTextAtY(g2,people.get(i).getFirstName(), 600, y);
+			UtilityMethods.centerTextAtY(g2,people.get(i).getFirstName() + " " + people.get(i).getLastName() + "                      " + "Age:"+String.valueOf((people.get(i).getAge())), 600, y);
+			
 			y += 100;
 		}
 	}

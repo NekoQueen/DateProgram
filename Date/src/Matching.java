@@ -2,7 +2,7 @@
 public class Matching {
 	
 	static double[] percentList = new double[PresetUsers.UsersList.size()];
-	public static double matchMaking(boolean[] array){
+	public static double matchMaking(boolean[] array){//returns the percent match
 		double yes = 0;
 		double no = 0;
 		
