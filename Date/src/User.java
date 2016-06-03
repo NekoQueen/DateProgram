@@ -1,4 +1,4 @@
-public class User {
+public class User implements PeopleInterface{
 	private int age;
 	private String firstName;
 	private String lastName;
@@ -69,5 +69,10 @@ public class User {
 
 	public void setCity(String city) {
 		this.city = city;
+	}
+
+	@Override
+	public int compareTo(User users) {
+		return 0;
 	}
 }
