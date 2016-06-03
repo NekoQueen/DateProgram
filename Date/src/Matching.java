@@ -19,7 +19,7 @@ public class Matching {
 //		System.out.println((yes+no)/5);
 		return (yes+no)/5;
 	}
-	
+	//test
 	public static double[] storePercentage(){
 		
 		percentList[0] = Matching.matchMaking(PresetUserAnswers.a1A);
